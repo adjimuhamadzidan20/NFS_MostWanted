@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* header section */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 12px 55px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 200px;
+    /* background-color: lightgray; */
+}
+
+nav .link-navigasi {
+    display: flex;
+    align-items: center;
+    /* background-color: gray; */
+}
+
+nav .link-navigasi ul {
+    display: flex;
+    list-style-type: none;
+    width: 155px;
+    justify-content: space-between;
+}
+
+nav .link-navigasi ul li a, li {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.1s;
+    font-weight: bold;
+}
+
+nav .link-navigasi ul li a:hover {
+    color: rgb(236, 180, 38);
+}
+
+nav .link-navigasi ul li:hover {
+    color: rgb(236, 180, 38);
+}
+
+/*ver mobile*/
+.link-mobile {
+    display: none;
+    background-color: black;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.link-mobile ul li {
+    line-height: 40px;
+    list-style: none;
+    transition: 0.1s;
+    text-align: center;
+}
+
+.link-mobile ul li a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-mobile ul li a:hover {
+    color: rgb(236, 180, 38);
+}
+
+/* dropdown */
+.link-navigasi ul li span {
+    cursor: pointer;
+}
+
+.dropdown-link {
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 130px;
+    display: none;
+}
+
+.dropdown-link a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.1s;
+    font-weight: bold;
+}
+
+.dropdown-link a:hover {
+    color: rgb(236, 180, 38);
+}
+
+.show {
+    display: block;
+}
+
+#hamburger {
+    display: none;
+    width: 50px;
+}
+
+.jumbotron {
+    background-image: url('../image/img/header2.jpg');
+    height: 89.5vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron h1 {
+    color: white;
+    letter-spacing: 8px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* main section */
+main {
+    width: 80%;
+    margin: auto;
+}
+
+/* story */
+.story {
+    margin-top: 130px;
+}
+
+.content-story h2 {
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.content-story hr {
+    margin: 10px 0 0 0;
+    height: 3px;
+    border: none;
+    background-color: black;
+}
+
+.desc-story img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    background-position: center;
+    margin: 25px 0;
+}
+
+.desc-story p {
+    text-align: justify;
+}
+
+/* footer section */
+footer {
+    background-color: black;
+    padding: 60px 45px;
+    margin-top: 250px;
+}
+
+.foot-info {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: lightgray; */
+}
+
+.logo-foot {
+    display: flex;
+    align-items: center;
+}
+
+.logo-foot img {
+    width: 220px;
+}
+
+.created p {
+    color: white;
+    text-align: right;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+/* responsive */
+@media screen and (max-width: 850px) {
+    nav {
+        padding: 12px 35px;
+    }
+
+    #hamburger {
+        display: block;
+    }
+    
+    nav .link-navigasi ul {
+        display: none;
+    }
+
+    nav .nav-list {
+        display: none;
+    }
+
+    .desc-story img {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        padding: 12px 25px;
+    }
+
+    footer {
+        padding: 60px 0;
+    }
+
+    .foot-info {
+        display: block;
+    }
+
+    .logo-foot {
+        margin-bottom: 40px;
+    }
+
+    .logo-foot img {
+        margin: auto;
+    }
+
+    .created p {
+        text-align: center;
+    }
+}

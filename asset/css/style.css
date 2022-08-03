@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* nav section */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 12px 55px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 200px;
+    /* background-color: lightgray; */
+}
+
+nav .link-navigasi {
+    display: flex;
+    align-items: center;
+    /* background-color: gray; */
+}
+
+nav .link-navigasi ul {
+    display: flex;
+    list-style-type: none;
+    width: 500px;
+    justify-content: space-between;
+}
+
+nav .link-navigasi ul li a, li {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.1s;
+    font-weight: bold;
+}
+
+nav .link-navigasi ul li a:hover {
+    color: rgb(236, 180, 38);
+}
+
+nav .link-navigasi ul li:hover {
+    color: rgb(236, 180, 38);
+}
+
+/*ver mobile*/
+.link-mobile {
+    display: none;
+    background-color: black;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.link-mobile ul li {
+    line-height: 40px;
+    list-style: none;
+    transition: 0.1s;
+    text-align: center;
+}
+.link-mobile ul li a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-mobile ul li a:hover {
+    color: rgb(236, 180, 38);
+}
+
+/* dropdown */
+.link-navigasi ul li span {
+    cursor: pointer;
+}
+
+.dropdown-link {
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 130px;
+    display: none;
+}
+
+.dropdown-link a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.1s;
+    font-weight: bold;
+}
+
+.dropdown-link a:hover {
+    color: rgb(236, 180, 38);
+}
+
+.show {
+    display: block;
+}
+
+#hamburger {
+    display: none;
+    width: 50px;
+}
+
+/* header section */
+.jumbotron {
+    background-image: url('../image/img/header.jpg');
+    height: 89.5vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron h1 {
+    color: white;
+    letter-spacing: 8px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* main section */
+main {
+    width: 85%;
+    margin: auto;
+}
+
+/* about */
+.about {
+    margin-top: 130px;
+    padding-top: 80px;
+}
+
+.about .content-about {
+    display: flex;
+}
+
+.content-about .img-about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-about, .desc-about {
+    flex-basis: 50%;
+    margin: 10px;
+}
+
+.desc-about h2 {
+    text-align: right;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.desc-about p {
+    text-align: justify;
+    line-height: 24px;
+}
+
+.desc-about hr {
+    margin: 10px 0;
+    height: 3px;
+    border: none;
+    background-color: black;
+}
+
+/* blacklist */
+.blacklist {
+    margin-top: 125px;
+    padding-top: 80px;
+}
+
+.content-blacklist h2 {
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.content-blacklist hr {
+    margin: 10px 0 20px 0;
+    height: 3px;
+    border: none;
+    background-color: black;
+}
+
+.img-blacklist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.img-blacklist .character {
+    flex-basis: 18%;
+    /* background-color: lightgrey; */
+    text-align: center;
+    font-weight: bold;
+    padding: 25px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.img-blacklist .character img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* cars */
+.cars {
+    margin-top: 125px;
+    padding-top: 80px;
+}
+
+.content-cars h2 {
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.content-cars hr {
+    margin: 10px 0 25px 0;
+    height: 3px;
+    border: none;
+    background-color: black;
+}
+
+.img-cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.img-cars .blacklist-car {
+    flex-basis: 48.5%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.img-cars #last {
+    flex-basis: 100%;
+}
+
+.img-cars .blacklist-car img {
+    width: 100%;
+    height: 100%;
+}
+
+.blacklist-car span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.blacklist-car:hover span {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.blacklist-car span p {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* footer section */
+footer {
+    background-color: black;
+    padding: 60px 45px;
+    margin-top: 160px;
+}
+
+.foot-info {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: lightgray; */
+}
+
+.logo-foot {
+    display: flex;
+    align-items: center;
+}
+
+.logo-foot img {
+    width: 220px;
+}
+
+.created p {
+    color: white;
+    text-align: right;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+/* responsive */
+@media screen and (max-width: 850px) {
+    nav {
+        padding: 12px 35px;
+    }
+
+    #hamburger {
+        display: block;
+    }
+    
+    nav .link-navigasi ul {
+        display: none;
+    }
+
+    nav .nav-list {
+        display: none;
+    }
+
+    .about .content-about {
+        display: block;
+    }
+
+    .desc-about h2 {
+        text-align: center;
+    }
+
+    .img-blacklist .character {
+        flex-basis: 30%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        padding: 12px 25px;
+    }
+
+    .img-blacklist .character {
+        flex-basis: 100%;
+    }
+
+    .img-blacklist .character img {
+        width: 60%;
+    }
+
+    .img-cars {
+        display: block;
+    }
+
+    footer {
+        padding: 60px 0;
+    }
+
+    .foot-info {
+        display: block;
+    }
+
+    .logo-foot {
+        margin-bottom: 40px;
+    }
+
+    .logo-foot img {
+        margin: auto;
+    }
+
+    .created p {
+        text-align: center;
+    }
+}
+
