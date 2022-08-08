@@ -155,7 +155,7 @@ main {
     margin-top: 135px;
 }
 
-.desc-profile {
+aside {
     display: flex;
     /* background-color: lightgrey; */
     justify-content: space-between;
@@ -195,12 +195,12 @@ main {
     margin-bottom: 40px;
 }
 
-aside {
+.photo {
     flex-basis: 38%;
     /* background-color: grey; */
 }
 
-aside img {
+.photo img {
     width: 100%;
     float: right;
 }
@@ -254,7 +254,7 @@ footer {
         display: none;
     }
 
-    .desc-profile {
+    aside {
         flex-direction: column;
     }
 
@@ -271,13 +271,13 @@ footer {
         font-size: 14px;
     }
 
-    aside {
+    .photo {
         order: 1;
         /* background-color: lightgray; */
         text-align: center;
     }
 
-    aside img {
+    .photo img {
         width: 80%;
         float: none;
     }
